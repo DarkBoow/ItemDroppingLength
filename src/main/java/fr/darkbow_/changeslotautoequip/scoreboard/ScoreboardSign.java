@@ -1,4 +1,4 @@
-package fr.darkbow_.animalsarrow.scoreboard;
+package fr.darkbow_.changeslotautoequip.scoreboard;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
