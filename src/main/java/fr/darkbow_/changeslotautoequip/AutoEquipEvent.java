@@ -76,22 +76,38 @@ public class AutoEquipEvent implements Listener {
                     if(helmet || chestplate || leggings || boots){player.updateInventory();}
                 }
             } else if(Objects.requireNonNull(player.getInventory().getItem(event.getNewSlot())).getType().name().contains("SWORD") || Objects.requireNonNull(player.getInventory().getItem(event.getNewSlot())).getType().name().contains("AXE")){
-                player.getInventory().setHelmet(player.getInventory().getItem(9));
-                player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(9)));
+                boolean changed = false;
+                if(player.getInventory().getItem(9) != null && Objects.requireNonNull(player.getInventory().getItem(9)).getType() != Material.AIR){
+                    player.getInventory().setHelmet(player.getInventory().getItem(9));
+                    player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(9)));
+                    changed = true;
+                }
 
-                player.getInventory().setChestplate(player.getInventory().getItem(10));
-                player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(10)));
+                if(player.getInventory().getItem(10) != null && Objects.requireNonNull(player.getInventory().getItem(10)).getType() != Material.AIR){
+                    player.getInventory().setChestplate(player.getInventory().getItem(10));
+                    player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(10)));
+                    changed = true;
+                }
 
-                player.getInventory().setLeggings(player.getInventory().getItem(11));
-                player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(11)));
+                if(player.getInventory().getItem(11) != null && Objects.requireNonNull(player.getInventory().getItem(11)).getType() != Material.AIR){
+                    player.getInventory().setLeggings(player.getInventory().getItem(11));
+                    player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(11)));
+                    changed = true;
+                }
 
-                player.getInventory().setBoots(player.getInventory().getItem(12));
-                player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(12)));
+                if(player.getInventory().getItem(12) != null && Objects.requireNonNull(player.getInventory().getItem(12)).getType() != Material.AIR){
+                    player.getInventory().setBoots(player.getInventory().getItem(12));
+                    player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(12)));
+                    changed = true;
+                }
 
-                player.getInventory().setItemInOffHand(player.getInventory().getItem(13));
-                player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(13)));
+                if(player.getInventory().getItem(13) != null && Objects.requireNonNull(player.getInventory().getItem(13)).getType() != Material.AIR){
+                    player.getInventory().setItemInOffHand(player.getInventory().getItem(13));
+                    player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(13)));
+                    changed = true;
+                }
 
-                player.updateInventory();
+                if(changed){player.updateInventory();}
             }
         }
     }
