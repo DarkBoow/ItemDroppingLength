@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ChangeSlotAutoEquip.iml" filepath="$PROJECT_DIR$/.idea/ChangeSlotAutoEquip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ItemDroppingLength.iml" filepath="$PROJECT_DIR$/.idea/ItemDroppingLength.iml" />
     </modules>
   </component>
 </project>

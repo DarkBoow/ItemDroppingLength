@@ -1,4 +1,4 @@
-name: ChangeSlotAutoEquip
+name: ItemDroppingLength
 author: DarkBow_
 version: 1.0
-main: fr.darkbow_.changeslotautoequip.ChangeSlotAutoEquip
+main: fr.darkbow_.itemdroppinglength.ItemDroppingLength
