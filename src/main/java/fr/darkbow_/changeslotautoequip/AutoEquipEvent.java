@@ -20,6 +20,7 @@ public class AutoEquipEvent implements Listener {
                     boolean chestplate = false;
                     boolean leggings = false;
                     boolean boots = false;
+                    boolean shield = false;
 
                     if(player.getInventory().getHelmet() != null && player.getInventory().getHelmet().getType() != Material.AIR){
                         helmet = true;
@@ -57,10 +58,20 @@ public class AutoEquipEvent implements Listener {
                         }
                     }
 
+                    if(player.getInventory().getItemInOffHand().getType() != Material.AIR){
+                        shield = true;
+                        if(player.getInventory().getItem(13) == null || player.getInventory().getItem(13).getType() == Material.AIR){
+                            player.getInventory().setItem(13, player.getInventory().getItemInOffHand());
+                        } else {
+                            player.getInventory().addItem(player.getInventory().getItemInOffHand());
+                        }
+                    }
+
                     if(helmet){player.getInventory().setHelmet(null);}
                     if(chestplate){player.getInventory().setChestplate(null);}
                     if(leggings){player.getInventory().setLeggings(null);}
                     if(boots){player.getInventory().setBoots(null);}
+                    if(shield){player.getInventory().setItemInOffHand(null);}
 
                     if(helmet || chestplate || leggings || boots){player.updateInventory();}
                 }
@@ -76,6 +87,9 @@ public class AutoEquipEvent implements Listener {
 
                 player.getInventory().setBoots(player.getInventory().getItem(12));
                 player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(12)));
+
+                player.getInventory().setItemInOffHand(player.getInventory().getItem(13));
+                player.getInventory().remove(Objects.requireNonNull(player.getInventory().getItem(13)));
 
                 player.updateInventory();
             }
