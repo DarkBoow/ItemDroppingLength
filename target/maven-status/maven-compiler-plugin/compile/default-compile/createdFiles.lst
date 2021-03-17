@@ -1,5 +1,6 @@
 fr\darkbow_\changeslotautoequip\ChangeSlotAutoEquipEvent.class
 fr\darkbow_\changeslotautoequip\scoreboard\ScoreboardSign$VirtualTeam.class
+fr\darkbow_\changeslotautoequip\SlotTask.class
 fr\darkbow_\changeslotautoequip\ChangeSlotAutoEquip.class
 fr\darkbow_\changeslotautoequip\scoreboard\ScoreboardSign.class
 fr\darkbow_\changeslotautoequip\scoreboard\ScoreboardSign$1.class
