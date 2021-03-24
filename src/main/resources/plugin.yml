@@ -2,3 +2,7 @@ name: ItemDroppingLength
 author: DarkBow_
 version: 1.0
 main: fr.darkbow_.itemdroppinglength.ItemDroppingLength
+commands:
+  itemdroplength:
+    description: Allows you to multiply your drop length range
+    permission:

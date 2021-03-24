@@ -11,7 +11,7 @@ public class ItemDroppingLengthEvent implements Listener {
     public void onItemDrop(PlayerDropItemEvent event){
         if(event.getPlayer().hasPermission("itemdroppinglength.longdrop")){
             if(event.getPlayer().getGameMode() == GameMode.CREATIVE || event.getPlayer().getGameMode() == GameMode.SPECTATOR){
-                event.getItemDrop().setVelocity(event.getItemDrop().getVelocity().multiply(2D));
+                event.getItemDrop().setVelocity(event.getItemDrop().getVelocity().multiply(ItemDroppingLength.droplength));
             }
         }
     }
